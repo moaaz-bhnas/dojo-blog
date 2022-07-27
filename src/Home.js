@@ -1,4 +1,3 @@
-import { memo } from "react";
 import Blogs from "./Blogs";
 import useFetch from "./useFetch";
 
@@ -19,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default memo(Home);
+export default Home;
