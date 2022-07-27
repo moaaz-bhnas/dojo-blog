@@ -1,18 +1,19 @@
 import { memo } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav aria-label="main" className="nav">
       <ul className="nav__list">
         <li>
-          <a className="nav__link" href="/">
+          <Link className="nav__link" to="/">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="nav__link" href="/create">
+          <Link className="nav__link" to="/create">
             New Blog
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
