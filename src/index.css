@@ -10,7 +10,7 @@ body {
 
 .header {
   max-width: 40rem;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
 
   display: flex;
   justify-content: space-between;
@@ -38,4 +38,27 @@ body {
   color: inherit;
   display: block;
   padding: 0.8rem;
+}
+
+.home__title {
+  position: absolute;
+  left: -200rem;
+}
+
+.blogs {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.blogs__item {
+  margin-bottom: 1.5rem;
+}
+
+.blogs__title {
+  color: #f1356d;
+  margin: 0;
+}
+
+.blogs__body {
+  margin: 0.75rem 0;
 }
