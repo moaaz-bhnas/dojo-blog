@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
   const [title, setTitle] = useState("");
@@ -7,7 +7,7 @@ function Create() {
   const [author, setAuthor] = useState("hazem");
   const [loading, setLoading] = useState(false);
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSubmit = useCallback(
     async (event) => {
@@ -21,7 +21,7 @@ function Create() {
         body: JSON.stringify(blog),
       });
       setLoading(false);
-      history.push("/");
+      navigate("/");
     },
     [title, body, author]
   );

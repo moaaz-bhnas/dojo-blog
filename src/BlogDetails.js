@@ -1,10 +1,10 @@
 import { useCallback } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 function BlogDetails() {
   const { id } = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const {
     data: blog,
@@ -18,7 +18,7 @@ function BlogDetails() {
     await fetch(`http://localhost:8000/blogs/${id}`, {
       method: "DELETE",
     });
-    history.push("/");
+    navigate("/");
   }, []);
 
   return (
