@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Link } from "react-router-dom";
 
 const Blogs = ({ title, blogs }) => {
   return (
@@ -8,8 +9,10 @@ const Blogs = ({ title, blogs }) => {
       <ul className="blogs">
         {blogs.map((blog) => (
           <li className="blogs__item" key={blog.id}>
-            <h3 className="blogs__title">{blog.title}</h3>
-            <p className="blogs__body">{blog.body}</p>
+            <Link className="blogs__link" to={`/blogs/${blog.id}`}>
+              <h3 className="blogs__title">{blog.title}</h3>
+              <p className="blogs__author">Written by {blog.author}</p>
+            </Link>
           </li>
         ))}
       </ul>
