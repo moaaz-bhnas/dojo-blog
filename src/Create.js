@@ -71,7 +71,7 @@ function Create() {
         <button
           className="createForm__button"
           type="submit"
-          disabled={loading ? true : false}
+          disabled={loading || !title || !body ? true : false}
         >
           {loading ? "Adding blog .." : "Add blog"}
         </button>
